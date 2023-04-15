@@ -6,6 +6,10 @@ class Price(private val quantity: Int, private val itemPrice: Double) {
         return getBasePrice() * discountFactor
     }
 
+    private fun getDiscountFactor(): Double {
+        TODO()
+    }
+
     private fun getBasePrice(): Double {
         return quantity * itemPrice
     }
