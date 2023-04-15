@@ -32,6 +32,9 @@ class Owing {
         println("name: $name")
         println("amount: $outstanding")
     }
+
+    private fun printBanner() {
+    }
 }
 
 data class Order(val price: Double)
