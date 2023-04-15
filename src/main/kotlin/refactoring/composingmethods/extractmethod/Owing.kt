@@ -17,10 +17,7 @@ class Owing {
         val e = orders.iterator()
         var outstanding = 0.0
 
-        // print banner
-        println("********************************************************************************")
-        println(StringUtils.center(" Customer Owes ", TEXT_WIDTH, '*'))
-        println("********************************************************************************")
+        printBanner()
 
         // calculate outstanding
         while (e.hasNext()) {
