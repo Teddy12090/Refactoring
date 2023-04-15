@@ -30,7 +30,7 @@ class Owing {
         println("amount: $outstanding")
     }
 
-    private fun printDetails() {
+    private fun printDetails(outstanding: Double) {
         // print details
         println("name: $name")
         println("amount: $outstanding")
