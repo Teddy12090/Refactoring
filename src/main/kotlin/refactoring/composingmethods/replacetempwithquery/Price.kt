@@ -3,7 +3,7 @@ package refactoring.composingmethods.replacetempwithquery
 class Price(private val quantity: Int, private val itemPrice: Double) {
     fun getPrice(): Double {
         val discountFactor = getDiscountFactor()
-        return getBasePrice() * discountFactor
+        return getBasePrice() * getDiscountFactor()
     }
 
     private fun getDiscountFactor(): Double {
