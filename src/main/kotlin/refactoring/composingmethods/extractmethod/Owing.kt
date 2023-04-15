@@ -14,17 +14,8 @@ class Owing {
     }
 
     fun printOwing() {
-        val e = orders.iterator()
-        var outstanding = 0.0
-
+        val outstanding = calculateOutstanding()
         printBanner()
-
-        // calculate outstanding
-        while (e.hasNext()) {
-            val order = e.next()
-            outstanding += order.price
-        }
-
         printDetails(outstanding)
     }
 
