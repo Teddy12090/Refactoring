@@ -7,7 +7,7 @@ class Price(private val quantity: Int, private val itemPrice: Double) {
     }
 
     private fun getDiscountFactor(): Double {
-        TODO()
+        return if (getBasePrice() > 1000) 0.95 else 0.98
     }
 
     private fun getBasePrice(): Double {
