@@ -30,6 +30,9 @@ class Owing {
         println("amount: $outstanding")
     }
 
+    private fun printDetails() {
+    }
+
     private fun printBanner() {
         // print banner
         println("********************************************************************************")
