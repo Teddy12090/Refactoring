@@ -30,15 +30,15 @@ class Owing {
 
     private fun calculateOutstanding(): Double {
         val e = orders.iterator()
-        var outstanding = 0.0
+        var result = 0.0
 
         // calculate outstanding
         while (e.hasNext()) {
             val order = e.next()
-            outstanding += order.price
+            result += order.price
         }
 
-        return outstanding
+        return result
     }
 
     private fun printDetails(outstanding: Double) {
