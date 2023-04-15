@@ -5,8 +5,4 @@ class Rating(private val numberOfLateDeliveries: Int) {
         return if (numberOfLateDeliveries > 5) 2 else 1
     }
 
-    private fun moreThanFiveLateDeliveries(): Boolean {
-        return numberOfLateDeliveries > 5
-    }
-
 }
