@@ -8,6 +8,6 @@ class Price(private val quantity: Int, private val itemPrice: Double) {
     }
 
     private fun getBasePrice(): Double {
-        TODO()
+        return quantity * itemPrice
     }
 }
