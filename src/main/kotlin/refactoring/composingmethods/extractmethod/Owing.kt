@@ -34,6 +34,10 @@ class Owing {
     }
 
     private fun printBanner() {
+        // print banner
+        println("********************************************************************************")
+        println(StringUtils.center(" Customer Owes ", TEXT_WIDTH, '*'))
+        println("********************************************************************************")
     }
 }
 
