@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test
 
 internal class ExtractMethodTest {
 
+    private var previousAmount: Double = 0.0
     private lateinit var owing: Owing
 
     @BeforeEach
@@ -22,9 +23,20 @@ internal class ExtractMethodTest {
         amountAmountShouldBe(210.7)
     }
 
+    @Test
+    fun printOwingWithPreviousAmount() {
+        givenOrders(10.5, 200.2)
+        givenPreviousAmount(10.0)
+        amountAmountShouldBe(10.0 * 1.2 + 210.7)
+    }
+
+    private fun givenPreviousAmount(previousAmount: Double) {
+        this.previousAmount = previousAmount
+    }
+
     private fun amountAmountShouldBe(amount: Double) {
         val output = captureStandardOut {
-            owing.printOwing()
+            owing.printOwing(previousAmount)
         }
 
         output shouldBe "********************************************************************************\n" +

@@ -13,14 +13,11 @@ class Owing {
         orders.add(order)
     }
 
-    fun printOwing() {
+    fun printOwing(previousAmount: Double) {
         val e = orders.iterator()
-        var outstanding = 0.0
+        var outstanding = previousAmount * 1.2
 
-        // print banner
-        println("********************************************************************************")
-        println(StringUtils.center(" Customer Owes ", TEXT_WIDTH, '*'))
-        println("********************************************************************************")
+        printBanner()
 
         // calculate outstanding
         while (e.hasNext()) {
@@ -28,9 +25,20 @@ class Owing {
             outstanding += order.price
         }
 
+        printDetails(outstanding)
+    }
+
+    private fun printDetails(outstanding: Double) {
         // print details
         println("name: $name")
         println("amount: $outstanding")
+    }
+
+    private fun printBanner() {
+        // print banner
+        println("********************************************************************************")
+        println(StringUtils.center(" Customer Owes ", TEXT_WIDTH, '*'))
+        println("********************************************************************************")
     }
 }
 
