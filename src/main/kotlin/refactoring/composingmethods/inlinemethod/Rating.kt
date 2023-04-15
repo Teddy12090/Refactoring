@@ -2,7 +2,7 @@ package refactoring.composingmethods.inlinemethod
 
 class Rating(private val numberOfLateDeliveries: Int) {
     fun getRating(): Int {
-        return if (moreThanFiveLateDeliveries()) 2 else 1
+        return if (numberOfLateDeliveries > 5) 2 else 1
     }
 
     private fun moreThanFiveLateDeliveries(): Boolean {
