@@ -28,6 +28,9 @@ class Owing {
         printDetails(outstanding)
     }
 
+    private fun calculateOutstanding() {
+    }
+
     private fun printDetails(outstanding: Double) {
         // print details
         println("name: $name")
