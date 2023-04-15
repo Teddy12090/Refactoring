@@ -25,9 +25,7 @@ class Owing {
             outstanding += order.price
         }
 
-        // print details
-        println("name: $name")
-        println("amount: $outstanding")
+        printDetails(outstanding)
     }
 
     private fun printDetails(outstanding: Double) {
