@@ -4,7 +4,7 @@ import kotlin.math.min
 
 class Haggis(private val primaryForce: Double, private val secondaryForce: Double, private val mass: Double, private val delay: Int) {
     fun getDistanceTravelled(time: Int): Double {
-        var acc = primaryForce / mass
+        val primaryAcc = primaryForce / mass
         val primaryTime = min(time, delay)
         var result = 0.5 * acc * primaryTime * primaryTime
         val secondaryTime = time - delay
