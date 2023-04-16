@@ -10,8 +10,8 @@ class Haggis(private val primaryForce: Double, private val secondaryForce: Doubl
         val secondaryTime = time - delay
         if (secondaryTime > 0) {
             val primaryVel = primaryAcc * delay
-            val acc = (primaryForce + secondaryForce) / mass
-            result += primaryVel * secondaryTime + 0.5 * acc * secondaryTime * secondaryTime
+            val secondaryAcc = (primaryForce + secondaryForce) / mass
+            result += primaryVel * secondaryTime + 0.5 * secondaryAcc * secondaryTime * secondaryTime
         }
         return result
     }
