@@ -6,10 +6,10 @@ class Haggis(private val primaryForce: Double, private val secondaryForce: Doubl
     fun getDistanceTravelled(time: Int): Double {
         val primaryAcc = primaryForce / mass
         val primaryTime = min(time, delay)
-        var result = 0.5 * acc * primaryTime * primaryTime
+        var result = 0.5 * primaryAcc * primaryTime * primaryTime
         val secondaryTime = time - delay
         if (secondaryTime > 0) {
-            val primaryVel = acc * delay
+            val primaryVel = primaryAcc * delay
             acc = (primaryForce + secondaryForce) / mass
             result += primaryVel * secondaryTime + 0.5 * acc * secondaryTime * secondaryTime
         }
